@@ -45,12 +45,48 @@
         #create {
             width: 120px;
             height: 40px;
-            font-size: 14px;
-            font-weight: 600;
-            border: 1px solid #8f8f8f;
+            font-size: 16px;
+            font-weight: 700;
+            background: #000000;
+            color: #ffffff;
             border-radius: 5px;
-            background: none;
             cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid #000000;
+
+            &:hover {
+                background: #ffffff;
+                color: #000000;
+            }
+
+            &:active {
+                background: #000000;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .top-todo-place {
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+        width: 100%;
+        align-items: center;
+        border-bottom: 1px solid black;
+        margin-top: 25px;
+        font-size: 17px;
+        font-weight: 700;
+
+        .numeratin {
+            width: 4%;
+        }
+
+        .titles {
+            width: 60%;
+        }
+
+        .timeing {
+            width: 30.2%;
         }
     }
 
@@ -64,7 +100,7 @@
             flex-direction: row;
             width: 100%;
             height: 40px;
-            border-bottom: 1px solid #8f8f8f;
+            border-bottom: 1px solid #a8a8a8;
             align-items: center;
 
             .taskNumber {
@@ -103,6 +139,74 @@
                 .taskChangeIcon {
                     width: 90%;
                     height: 90%;
+                }
+            }
+        }
+    }
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #00000070;
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    #content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+        border-radius: 5px;
+        gap: 5px;
+
+        span {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+            input {
+                width: 350px;
+                height: 35px;
+                padding: 10px;
+                font-size: 14px;
+                border: 1px solid #8f8f8f;
+                border-radius: 5px;
+                
+                
+                &::placeholder {
+                    color: 1px solid #8f8f8f;
+                }
+            }
+            
+            button {
+                width: 80px;
+                height: 35px;
+                cursor: pointer;
+                background: #000000;
+                border: 1px solid #000;
+                transition: all 0.2s ease;
+                color: #ffffff;
+                border-radius: 5px;
+
+                &:hover {
+                    background: #ffffff;
+                    color: #000000;
+                }
+
+                &:active {
+                    background: #000000;
+                    color: #ffffff;
                 }
             }
         }

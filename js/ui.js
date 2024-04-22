@@ -51,7 +51,7 @@ export function reloadTodos(arr, place) {
         taskChangeButton.onclick = () => {
             let prmt = prompt('Введите новый текст задачи:')
 
-            if (prmt !== '') {
+            if (prmt !== null || prmt !== '') {
                 let editedTask = {
                     id: item.id,
                     title: prmt,

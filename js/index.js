@@ -22,7 +22,7 @@ form.onsubmit = (event) => {
         status: false
     }
 
-    if (task.title.length === 0) return
+    if (task.title === null|| task.title.length === 0) return
 
     let configuration = {
         method: "post",
@@ -34,7 +34,7 @@ form.onsubmit = (event) => {
 
     fetch(baseURL + "/todos", configuration)
         .then(response => {
-            if (response.status === 200 || response.status === 201) getData()      
+            if (response.status === 200 || response.status === 201) getData()
     })
 
     form.reset()

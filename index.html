@@ -17,8 +17,24 @@
             <input name="task" placeholder="make a list">
             <button id="create">Create</button>
         </form>
+        <div class="top-todo-place">
+            <div class="numeratin">#</div>
+            <div class="titles">Title</div>
+            <div class="timeing">Time</div>
+            <div class="actions">Actions</div>
+        </div>
         <div class="todo-place"></div>
     </main>
+
+    <div id="modal">
+        <div id="content">
+            <span>Would you like to edit ?</span>
+            <form>
+                <input type="text" placeholder="Edit">
+                <button>Edit</button>
+            </form>
+        </div>
+    </div>
 
     <script type="module" src="./js/index.js"></script>
 </body>
