@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-block: 25px;
+
+    .top {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+
+        span {
+            font-size: 40px;
+            font-weight: 900;
+        }
+    }
+
+    .todo {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        gap: 10px;
+
+        input {
+            width: 450px;
+            height: 40px;
+            padding-inline: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid #8f8f8f;
+            border-radius: 5px;
+
+            &::placeholder {
+                color: #8f8f8f;
+            }
+        }
+
+        #create {
+            width: 120px;
+            height: 40px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid #8f8f8f;
+            border-radius: 5px;
+            background: none;
+            cursor: pointer;
+        }
+    }
+
+    .todo-place {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .todoRow {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 40px;
+            border-bottom: 1px solid #8f8f8f;
+            align-items: center;
+
+            .taskNumber {
+                width: 4%;
+            }
+
+            .taskText {
+                width: 60%;
+            }
+
+            .taskTime {
+                width: 30%;
+            }
+
+            .taskDeleteButton {
+                width: 30px;
+                height: 30px;
+                background: none;
+                border: none;
+                cursor: pointer;
+
+                .taskDeleteIcon {
+                    width: 90%;
+                    height: 90%;
+                }
+            }
+
+            .taskChangeButton {
+                width: 30px;
+                height: 30px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                margin-left: 1%;
+
+                .taskChangeIcon {
+                    width: 90%;
+                    height: 90%;
+                }
+            }
+        }
+    }
+}
