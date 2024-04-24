@@ -121,10 +121,15 @@
                 background: none;
                 border: none;
                 cursor: pointer;
+                transition: all 0.2s ease;
 
                 .taskDeleteIcon {
                     width: 90%;
                     height: 90%;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
                 }
             }
 
@@ -135,10 +140,15 @@
                 border: none;
                 cursor: pointer;
                 margin-left: 1%;
+                transition: all 0.2s ease;
 
                 .taskChangeIcon {
                     width: 90%;
                     height: 90%;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
                 }
             }
         }
@@ -182,13 +192,13 @@
                 font-size: 14px;
                 border: 1px solid #8f8f8f;
                 border-radius: 5px;
-                
-                
+
+
                 &::placeholder {
                     color: 1px solid #8f8f8f;
                 }
             }
-            
+
             button {
                 width: 80px;
                 height: 35px;

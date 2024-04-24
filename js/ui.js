@@ -82,6 +82,7 @@ export function reloadTodos(arr, place) {
                         .then(response => {
                             if (response.status === 200 || response.status === 201) {
                                 getData()
+                                modal.style.display = 'none'
                             }
                         })
                 }
