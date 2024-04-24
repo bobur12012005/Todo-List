@@ -61,7 +61,7 @@ export function reloadTodos(arr, place) {
             let editerAdmit = document.querySelector('.editBox button')
 
             editerAdmit.onclick = () => {
-                if (editer.value !== null || editer.value !== '') {
+                if (editer.value !== '') {
                     let editedTask = {
                         id: item.id,
                         title: editer.value,

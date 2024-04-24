@@ -22,7 +22,7 @@ form.onsubmit = (event) => {
         status: false
     }
 
-    if (task.title === null|| task.title.length === 0) return
+    if (task.title.length === 0) return
 
     let configuration = {
         method: "post",
