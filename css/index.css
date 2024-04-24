@@ -170,7 +170,7 @@
             font-weight: 700;
         }
 
-        form {
+        .editBox {
             display: flex;
             flex-direction: row;
             gap: 5px;

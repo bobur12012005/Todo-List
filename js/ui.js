@@ -1,5 +1,12 @@
 import { baseURL, getData } from "./index.js"
 
+let modal = document.querySelector('#modal')
+modal.onclick = (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none'
+    }
+}
+
 export function reloadTodos(arr, place) {
     place.innerHTML = ""
     let nmbr = 1
@@ -49,31 +56,35 @@ export function reloadTodos(arr, place) {
         }
 
         taskChangeButton.onclick = () => {
-            let prmt = prompt('Введите новый текст задачи:')
+            modal.style.display = 'flex'
+            let editer = document.querySelector('.editBox input')
+            let editerAdmit = document.querySelector('.editBox button')
 
-            if (prmt !== null || prmt !== '') {
-                let editedTask = {
-                    id: item.id,
-                    title: prmt,
-                    time: item.time,
-                    editTime: new Date().toLocaleTimeString() + ' / ' + new Date().toLocaleDateString(),
-                    status: item.status
-                }
-
-                let configuration = {
-                    method: "put",
-                    body: JSON.stringify(editedTask),
-                    headers: {
-                        "Content-Type": "application/json"
+            editerAdmit.onclick = () => {
+                if (editer.value !== null || editer.value !== '') {
+                    let editedTask = {
+                        id: item.id,
+                        title: editer.value,
+                        time: item.time,
+                        editTime: new Date().toLocaleTimeString() + ' / ' + new Date().toLocaleDateString(),
+                        status: item.status
                     }
-                }
 
-                fetch(baseURL + "/todos/" + item.id, configuration)
-                    .then(response => {
-                        if (response.status === 200 || response.status === 201) {
-                            getData()
+                    let configuration = {
+                        method: "put",
+                        body: JSON.stringify(editedTask),
+                        headers: {
+                            "Content-Type": "application/json"
                         }
-                    })
+                    }
+
+                    fetch(baseURL + "/todos/" + item.id, configuration)
+                        .then(response => {
+                            if (response.status === 200 || response.status === 201) {
+                                getData()
+                            }
+                        })
+                }
             }
         }
     }
